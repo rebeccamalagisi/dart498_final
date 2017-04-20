@@ -1,0 +1,54 @@
+.grid-item h2 {
+	font-family: 'Montserrat', sans-serif;
+
+	text-transform:uppercase;
+	font-weight:300;
+	font-size:26px;
+	line-height: 32px;
+	position:absolute;
+	top:50%;
+	left:50%; /* HOWEVER THIS TREATS THE EDGES 50%, SO THE BOX WILL BE IN THE BOTTOM RIGHT */
+	transform:translate(-50%,-50%); /* this will correct that to move it to the center */
+	-webkit-transform:translate(-50%,-50%); /* this will let it work in the older versions of Safari */
+	color:rgba(255,255,255,0);
+	background-color: rgba(255,255,255,0);
+	z-index: 2
+	/*padding:20px;*/
+	/*transition:all .35s ease-out 0s;*/
+}
+
+.grid-item:after {
+	background-color: #ffffff;
+  position: absolute;
+  content: "";
+  display: block;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0;
+
+
+}
+
+.grid-item:hover h2 {
+	color:#ff522b;
+
+}
+
+.grid-item:hover {
+	background-color:#bbff1e;
+
+}
+
+
+/* opacity */
+.grid-item img {
+	opacity: 1;
+	/*-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;*/
+}
+
+.grid-item:hover img {
+	opacity: 0;
+}
